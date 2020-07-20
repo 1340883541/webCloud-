@@ -1,0 +1,746 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font-weight: normal; */
+  vertical-align: baseline;
+  font-family: "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft Yahei",
+    arial,
+    \5b8b\4f53,
+    "Helvetica Neue",
+    Helvetica,
+    STHeiTi,
+    sans-serif;
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+textarea,
+.el-textarea__inner {
+  resize: none;
+}
+
+/* 点击搜索框获取焦点 placeholder消失-开始 */
+.el-input__inner::-webkit-input-placeholder {
+  color: #999999;opacity: 1;
+}
+.el-input__inner:-ms-input-placeholder {
+  color: #999999;opacity: 1;
+}
+.el-input__inner::-moz-placeholder {
+  color: #999999;opacity: 1;
+}
+/* WebKit browsers */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+  /* transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值 */
+}
+/* Mozilla Firefox 4 to 18 */
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Mozilla Firefox 19+ */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+/* Internet Explorer 10+ */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* 点击搜索框获取焦点 placeholder消失-结束 */
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: transparent; */
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+html,
+body {
+  width: 100%;
+  height:100%;
+  font-family: "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft Yahei",
+    arial,
+    \5b8b\4f53,
+    "Helvetica Neue",
+    Helvetica,
+    STHeiTi,
+    sans-serif;
+  background: #f7f7f7;
+  font-size: 14px;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  /* font-weight:400; */
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.padding {
+  padding: 30px 20px 30px 20px;
+}
+
+.color-chengse {
+  color: #f3a135;
+}
+
+.content-container::-webkit-scrollbar-track-piece {
+  /* background: transparent; */
+}
+
+/* 侧栏滚动条 */
+.el-scrollbar__wrap {}
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*弹性盒子布局*/
+.flex-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-wrap1 {
+  display: -webkit-box;
+}
+
+.flex-con {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.flex-hh {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-hh-not {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.flex-vertical {
+  -webkit-box-orient: vertical;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  align-content: center;
+}
+
+.flex-align-between {
+  align-content: space-between;
+}
+
+.flex-align-item {
+  align-items: center;
+}
+
+.flex-align-item-end {
+  align-items: end;
+}
+
+.flex-align-item-flex-end {
+  align-items: flex-end;
+}
+
+/*强制换行*/
+.break-word {
+  word-wrap: break-word;
+}
+
+/* 多行省略 */
+.elipseone {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.w-elli {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.w-elli-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-elli-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-elli-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-elli-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* 样式修改 */
+.el-range-editor--small .el-range-input {
+  text-align: left;
+}
+
+.dialog_box {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+  margin-top: -20px;
+}
+
+.dialog_box.tree_box {
+  max-height: 40vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.tree_box::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+}
+
+.tree_box::-webkit-scrollbar-track-piece {
+  /*滚动条内层轨道部分*/
+  background: transparent;
+}
+
+.file_body .el-table__body-wrapper {
+  overflow-y: auto;
+  max-height: 80vh;
+  position: relative;
+  /* padding-bottom: 4px; */
+  /* max-height: 200px; */
+}
+
+.file_body .el-table th {
+  padding: 0px !important;
+}
+
+.file_body .el-table td {
+  padding: 8px 0;
+}
+.search_file_body.file_body .el-table td {
+  padding-bottom: 30px;
+}
+.el-table th,
+.el-table tr,
+.el-radio {
+  background: transparent;
+}
+.el-table th {
+  background: #f7f7f7;
+}
+.el-checkbox__inner{
+  border: 1px solid #707070;
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #18B270;
+  border-color: #18B270;
+}
+.el-table__body tr.current-row>td {
+  background-color: #F5F7FA;
+}
+/* 表框颜色 */
+.el-table th.is-leaf,
+.el-table td{
+  border-bottom:1px solid #DCDFE6
+}
+
+.manage_tablebox .el-button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #f3a135;
+  padding: 0;
+  padding-right: 10px;
+}
+
+.manage_top {
+  margin-top: 20px;
+}
+
+.manage_tablebox .el-button.table_rowdet {
+  color: #999;
+}
+
+.manage_tablebox .table_rowroot {
+  color: #2791ef;
+}
+
+.manage_tablebox .el-button:focus,
+.manage_tablebox .el-button:hover {
+  color: #f3a135;
+  border-color: transparent;
+  background-color: transparent
+}
+
+.manage_tablebox .el-button:active {
+  color: #f3a135;
+  border-color: transparent;
+  outline: 0
+}
+
+/* 部分下拉 */
+.el-form-item.list_formiten,
+.el-form-item.list_formiten .el-form-item__content {
+  height: 40px;
+}
+
+/* 部分from调整 */
+#from_div .el-form-item {
+  display: flex;
+}
+
+#from_div .el-form-item__label {
+  width: 100px !important;
+}
+
+#from_div .el-form-item__content {
+  flex: 1;
+  margin-left: 0 !important;
+}
+
+/*upload上传文件样式调整*/
+.el-upload-list__item-name {
+  cursor: pointer;
+}
+
+
+/* 样式调整 */
+.el-breadcrumb__item:last-child .el-breadcrumb__inner {
+  cursor: pointer !important;
+}
+
+.el-breadcrumb__inner a,
+.el-breadcrumb__inner.is-link {
+  /* color: #222 !important; */
+}
+.el-button--small{
+  font-size: 14px;
+}
+
+/* 滑动验证码 */
+.vue-auth-box {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+.vue-auth-box .vcode-box {
+  padding: 10px;
+  position: absolute;
+  background: #fff;
+  top: -moz-calc((100vh - 162px) / 2) !important;
+  top: -webkit-calc((100vh - 162px) / 2) !important;
+  top: calc((100vh - 162px) / 2) !important;
+  left: -moz-calc(63%) !important;
+  left: -webkit-calc(63%) !important;
+  left: calc(63%) !important;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+/* 登录样式调整 */
+.login-form .el-input__inner {
+  padding: 0 8px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+}
+
+/* 全部文件表格样式调整 */
+.el-dropdown-menu {
+  border: 1px solid #18B270;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.thumbnail_item_top_down {}
+
+/* 自定义下拉 */
+.el-dropdown-menu {
+  padding: 5px 0;
+}
+
+.el-popper[x-placement^="bottom"] {
+  margin-top: 6px;
+}
+
+.el-popper[x-placement^="bottom"] .popper__arrow {
+  border-bottom-color: #18B270;
+}
+
+.el-popper[x-placement^="right"] .popper__arrow {
+  border-right-color: #18B270;
+}
+
+/* 文字主题色-绿色 */
+.color-green {
+  color: #18B270;
+}
+
+/* 树控高亮修改 */
+.el-tree-node:focus>.el-tree-node__content,
+.el-tree-node__content:hover {
+  background-color: #F5F7FA;
+  font-weight: bold;
+}
+
+/*  */
+.root_tree_info .el-checkbox__input.is-checked+.el-checkbox__label {
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+  color: #222;
+}
+
+/* dialog弹框样式修改 */
+.el-dialog__header {
+  border-bottom: 1px solid #E6E7EB;
+  padding: 7px 20px 10px;
+}
+
+.el-dialog__headerbtn {
+  top: 12px;
+  right: 10px;
+}
+
+.el-dialog__title {
+  /* color: #222; */
+  font-size: 16px;
+}
+.wjshare_dialog>.el-dialog{
+  margin-top: calc((100vh - 300px) / 2) !important;
+  margin-bottom: 0;
+}
+.wjroot_dialog .el-dialog__body,
+.wjshare_dialog .el-dialog__body {
+  padding: 30px 15px;
+  padding-top: 9px;
+}
+.wjshare_dialog .el-dialog__body{
+  padding-bottom: 0;
+  min-height: 130px;
+}
+.wjload_dialog .el-dialog__body {
+  padding: 15px 24px;
+}
+
+.wjroot_dialog .el-dialog__footer,
+.wjshare_dialog .el-dialog__footer {
+  text-align: center
+}
+
+.wjroot_dialog .el-checkbox__label {
+  padding-left: 5px;
+}
+
+.wjload_dialogAcc .el-dialog__body{
+  padding:3px 15px!important;
+}
+.el-icon-arrow-down:before {}
+
+.qx_dialog .el-dialog__body{
+  min-height: 150px;
+}
+.el-dialog__body{
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 360px;
+  min-height: 100px;
+  padding-top: 15px;
+}
+.pel_info_tab .el-dialog__body{
+  max-height: 360px;
+}
+.wjj_dialog .el-dialog__body {
+  padding-right: 50px;
+}
+.tablelist .el-button--text{
+  color:#3397EE!important;
+}
+.el-table__expanded-cell{
+  padding:2px 50px!important
+}
+.table_share .col_blue{
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 2px 8px!important;
+  border: 1px solid rgba(181,181,181,1);
+  color: #222222;
+  cursor: pointer;
+  opacity: 1;
+}
+.table_share .cloInvalid{
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 2px 8px!important;
+  border: 1px solid #DCDFE6!important;
+  color:#999999!important;
+  cursor: pointer;
+}
+.el-pagination {
+  text-align: right;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.el-tabs--left .el-tabs__header.is-left{
+  margin-right: 0px!important;
+}
+.table_info .el-table__fixed::before, .el-table__fixed-right::before{
+  background-color: #DCDFE6
+}
+.table_info .el-table--group::after, .el-table--border::after, .el-table::before{
+  background-color: #DCDFE6;
+}
+.diolog_box .el-dialog__body{
+  max-height: 350px;
+}
+.el-table td, .el-table th{
+  vertical-align: inherit!important;
+}
+.expanded td{
+  border-bottom: none!important;
+}
+.col_tab .el-table__expanded-cell{
+  background: #F5F7FA;
+}
+
+
+
+
+

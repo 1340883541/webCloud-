@@ -1,0 +1,79 @@
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import '../theme/index.css'
+
+//图片放大预览
+import Viewer from 'v-viewer'
+import 'viewerjs/dist/viewer.css'
+//视频预览
+import VueVideoPlayer from 'vue-video-player'
+import 'vue-video-player/node_modules/video.js/dist/video-js.css'
+// import 'vue-video-player/src/custom-theme.css'
+Vue.use(VueVideoPlayer)
+
+import axios from 'axios'
+import {getData} from "./api/api.js"
+
+import App from './App'
+import uploader from 'vue-simple-uploader'
+import InfiniteLoading from 'vue-infinite-loading'
+//滑动验证码
+import SlideVerify from 'vue-monoplasty-slide-verify';
+//兼容ie,360浏览器
+import 'babel-polyfill'
+// Import upload
+import uploadFile from './api/uploadFile'
+// 复制内容到剪切板
+import VueClipboard from 'vue-clipboard2'
+
+import '../static/reset.css'
+//公用面包屑样式
+import '../static/breadcrumb.css'
+//公共样式
+import '../static/common.css'
+//home样式
+import '../static/home.css'
+
+import VueRouter from 'vue-router'
+import routes from './routes'
+
+Vue.config.productionTip = false
+Vue.use(ElementUI);
+Vue.use(VueRouter)
+Vue.use(uploader)
+Vue.use(InfiniteLoading)
+Vue.use(VueClipboard)
+Vue.use(Viewer)
+Vue.use(SlideVerify);
+Viewer.setDefaults({
+  Options: {
+    'zIndex': 9999,
+    'loop': false,
+    'loading': true,
+    'inline': false, //是否启用inline模式
+    'button': true, //是否显示右上角关闭按钮
+    'navbar': false, //显示缩略图导航
+    'title': false, // 显示当前图片的标题
+    'toolbar': true, //是否显示工具栏
+    'tooltip': true, //显示缩放百分比
+    'movable': true, //图片是否可以移动
+    'zoomable': true, //图片是否可缩放
+    'rotatable': true, //图片是否可旋转
+    'scalable': true, //图片是否可翻转
+    'transition': true, //css3过渡
+    'fullscreen': true, //播放时是否全屏
+    'keyboard': true, //是否支持键盘
+    // 'url': 'data-source' //设置大图URL
+  }
+})
+
+const router = new VueRouter({
+  routes
+})
+
+/* eslint-disable no-new */
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

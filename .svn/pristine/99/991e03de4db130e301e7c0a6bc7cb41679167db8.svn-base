@@ -1,0 +1,35 @@
+/* 面包屑 */
+.breadcrumb {
+  padding-top: 24px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  overflow: hidden;
+  padding-left: 15px;
+}
+
+.breadcrumb .header_info .curr_title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.breadcrumb .header_info .title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(24, 178, 112, 1);
+  cursor: pointer;
+}
+
+.breadcrumb .header_info i {
+  color: rgba(0, 0, 0, 1);
+  padding: 0 2px;
+}
+
+.breadcrumb .header_info .title_i {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(153, 153, 153, 1);
+}
